@@ -9,7 +9,7 @@ variable "project_id" {
 }
 
 variable "region" {
-  default     = "us-west1"
+  default = "us-west1"
 }
 
 variable "cluster_name" {
@@ -17,5 +17,5 @@ variable "cluster_name" {
 }
 
 variable "node_count" {
-    default = 3
+  default = 2
 }
