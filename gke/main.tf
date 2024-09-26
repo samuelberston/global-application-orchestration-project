@@ -4,10 +4,10 @@ provider "google" {
 }
 
 variable "project_id" {
-  description = "The GCP project ID"
+  description = "gaop-436806"
 }
 
 variable "region" {
-  description = "The region for the GKE cluster"
-  default     = "us-central1" # Change to your preferred region
+  description = "gaop-gke-cluster"
+  default     = "us-west1"
 }
