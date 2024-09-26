@@ -1,7 +1,7 @@
 # EKS cluster
 
 resource "aws_eks_cluster" "eks_cluster" {
-  name     = "goap-eks-cluster"
+  name     = "gaop-eks-cluster"
   role_arn = aws_iam_role.eks_cluster_role.arn
 
   vpc_config {
@@ -21,7 +21,7 @@ resource "aws_eks_cluster" "eks_cluster" {
 # eks-node-group.tf
 resource "aws_eks_node_group" "eks_node_group" {
   cluster_name    = aws_eks_cluster.eks_cluster.name
-  node_group_name = "goap-eks-nodes"
+  node_group_name = "gaop-eks-nodes"
   node_role_arn   = aws_iam_role.eks_node_role.arn
   subnet_ids = [
     aws_subnet.private_subnet_1.id,
