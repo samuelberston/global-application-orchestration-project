@@ -1,13 +1,21 @@
 provider "google" {
+  credentials = file("~/.gcp/gaop-436806-a1d06d0fe5f3.json")
   project     = var.project_id
   region      = var.region
 }
 
 variable "project_id" {
-  description = "gaop-436806"
+  default = "gaop-436806"
 }
 
 variable "region" {
-  description = "gaop-gke-cluster"
   default     = "us-west1"
+}
+
+variable "cluster_name" {
+  default = "gaop-gke-cluster"
+}
+
+variable "node_count" {
+    default = 3
 }
